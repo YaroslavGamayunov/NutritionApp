@@ -22,23 +22,25 @@ object Versions {
     const val DETEKT = "1.17.1"
 }
 
-object KotlinDependencies {
-    const val STDLIB = "org.jetbrains.kotlin:kotlin-stdlib:${Versions.KOTLIN}"
-    const val CORE_KTX = "androidx.core:core-ktx:${Versions.CORE_KTX}"
-}
+object Dependencies {
+    object Kotlin {
+        const val STDLIB = "org.jetbrains.kotlin:kotlin-stdlib:${Versions.KOTLIN}"
+        const val CORE_KTX = "androidx.core:core-ktx:${Versions.CORE_KTX}"
+    }
 
-object AndroidDependencies {
-    const val APPCOMPAT = "androidx.appcompat:appcompat:${Versions.APPCOMPAT}"
-    const val MATERIAL = "com.google.android.material:material:${Versions.MATERIAL}"
-    const val CONSTRAINT_LAYOUT =
-        "androidx.constraintlayout:constraintlayout:${Versions.CONSTRAINT_LAYOUT}"
-}
+    object Android {
+        const val APPCOMPAT = "androidx.appcompat:appcompat:${Versions.APPCOMPAT}"
+        const val MATERIAL = "com.google.android.material:material:${Versions.MATERIAL}"
+        const val CONSTRAINT_LAYOUT =
+            "androidx.constraintlayout:constraintlayout:${Versions.CONSTRAINT_LAYOUT}"
+    }
 
-object TestingDependencies {
-    const val JUNIT = "junit:junit:${Versions.JUNIT}"
-    const val JUNIT_EXT = "androidx.test.ext:junit:${Versions.JUNIT_EXT}"
-    const val ESPRESSO_CORE = "androidx.test.espresso:espresso-core:${Versions.ESPRESSO_CORE}"
-    const val DETEKT = "io.gitlab.arturbosch.detekt"
+    object Testing {
+        const val JUNIT = "junit:junit:${Versions.JUNIT}"
+        const val JUNIT_EXT = "androidx.test.ext:junit:${Versions.JUNIT_EXT}"
+        const val ESPRESSO_CORE = "androidx.test.espresso:espresso-core:${Versions.ESPRESSO_CORE}"
+        const val DETEKT = "io.gitlab.arturbosch.detekt"
+    }
 }
 
 

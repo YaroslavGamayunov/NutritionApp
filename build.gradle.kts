@@ -13,7 +13,7 @@ buildscript {
 }
 
 plugins {
-    id(TestingDependencies.DETEKT) version Versions.DETEKT
+    id(Dependencies.Testing.DETEKT) version Versions.DETEKT
 }
 
 allprojects {
@@ -25,7 +25,7 @@ allprojects {
 
 subprojects {
     apply {
-        plugin(TestingDependencies.DETEKT)
+        plugin(Dependencies.Testing.DETEKT)
     }
 
     detekt {

@@ -37,18 +37,18 @@ android {
 
 dependencies {
     // Kotlin
-    implementation(KotlinDependencies.STDLIB)
-    implementation(KotlinDependencies.CORE_KTX)
+    implementation(Dependencies.Kotlin.STDLIB)
+    implementation(Dependencies.Kotlin.CORE_KTX)
 
     // Android
-    implementation(AndroidDependencies.APPCOMPAT)
-    implementation(AndroidDependencies.MATERIAL)
-    implementation(AndroidDependencies.CONSTRAINT_LAYOUT)
+    implementation(Dependencies.Android.APPCOMPAT)
+    implementation(Dependencies.Android.MATERIAL)
+    implementation(Dependencies.Android.CONSTRAINT_LAYOUT)
 
     // Testing
-    testImplementation(TestingDependencies.JUNIT)
-    androidTestImplementation(TestingDependencies.JUNIT_EXT)
-    androidTestImplementation(TestingDependencies.ESPRESSO_CORE)
+    testImplementation(Dependencies.Testing.JUNIT)
+    androidTestImplementation(Dependencies.Testing.JUNIT_EXT)
+    androidTestImplementation(Dependencies.Testing.ESPRESSO_CORE)
 }
 
 tasks.register("checkStatic") {
