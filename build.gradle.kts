@@ -12,10 +12,27 @@ buildscript {
     }
 }
 
+plugins {
+    id(TestingDependencies.DETEKT) version Versions.DETEKT
+}
+
 allprojects {
     repositories {
         google()
         mavenCentral()
+    }
+}
+
+subprojects {
+    apply {
+        plugin(TestingDependencies.DETEKT)
+    }
+
+    detekt {
+        buildUponDefaultConfig = true
+        autoCorrect = true
+        config = rootProject.files("config/detekt/config.yml")
+        baseline = rootProject.file("config/detekt/baseline.xml")
     }
 }
 

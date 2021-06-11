@@ -50,3 +50,9 @@ dependencies {
     androidTestImplementation(TestingDependencies.JUNIT_EXT)
     androidTestImplementation(TestingDependencies.ESPRESSO_CORE)
 }
+
+tasks.register("checkStatic") {
+    group = "Verify"
+    description = "Runs static checks on the build"
+    dependsOn("detekt")
+}
